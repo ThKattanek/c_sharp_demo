@@ -9,19 +9,22 @@ namespace sdl
 		static void Main(string[] args)
 		{
 			SDL.SDL_Init(SDL.SDL_INIT_VIDEO);
+			
 
 			var window = SDL.SDL_CreateWindow("DEMO",
 			SDL.SDL_WINDOWPOS_CENTERED,
 			SDL.SDL_WINDOWPOS_CENTERED,
 			800,
 			600,
-			SDL.SDL_WindowFlags.SDL_WINDOW_SHOWN
+			SDL.SDL_WindowFlags.SDL_WINDOW_SHOWN | SDL.SDL_WindowFlags.SDL_WINDOW_RESIZABLE
 			);
 
 			var renderer = SDL.SDL_CreateRenderer(window, -1, SDL.SDL_RendererFlags.SDL_RENDERER_ACCELERATED);
 
 			SDL.SDL_SetRenderDrawColor(renderer, 135, 200, 235, 255);
 			SDL.SDL_RenderClear(renderer);
+			SDL_gfx.lineRGBA(renderer, 0, 0, 500,500,255,255,255,255);
+
 			SDL.SDL_RenderPresent(renderer);
 
 			bool running = true;
