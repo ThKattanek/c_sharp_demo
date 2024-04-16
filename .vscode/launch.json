@@ -1,0 +1,12 @@
+{
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"name": "C#: c_sharp_demo",
+			"type": "dotnet",
+			"request": "launch",
+			"projectPath": "${workspaceFolder}/c_sharp_demo/c_sharp_demo.csproj",
+			"launchConfigurationId": "TargetFramework=;c_sharp_demo"
+		}
+	]
+}
